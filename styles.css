@@ -9,7 +9,7 @@ body {
     font-family: "Space Mono", monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    background: url('imgs/background.webp') no-repeat center center fixed;
+    background: url('imgs/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #000;
     justify-content: center;
@@ -66,7 +66,7 @@ h2 {
     flex: 0 0 250px;
     padding: 20px;
     text-align: center;
-    border-right: 1px solid #ccc;
+    /* border-right: 1px solid #ccc; */
     max-width: 350px;
 }
 
@@ -276,31 +276,36 @@ a[href^="https"]::after {
     right: 10px;
     text-align: right;
     font-family: inherit;
-}
-
-.info-icon {
+  }
+  
+  .info-icon {
+    color:#fff;
     font-size: 1.5rem;
-    opacity: 0.3;
-    transition: opacity 0.3s;
-    cursor: default;
-}
-
-.info-container:hover .info-icon {
     opacity: 1;
-}
+    cursor: pointer;
+  }
 
-.photo-credit {
+  .info-icon:hover {
+    opacity: 0;
+  }
+  
+  .info-container:hover .info-icon{
+    opacity: 0;
+  }
+  
+  .photo-credit {
     display: none;
     margin-top: 5px;
     font-size: 0.8rem;
-    color: #555;
-    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    background: rgba(255, 255, 255, 1);
     padding: 4px 8px;
     border-radius: 4px;
     width: max-content;
     text-align: left;
-}
-
-.info-container:hover .photo-credit {
+  }
+  
+  .info-container:hover .photo-credit {
     display: block;
-}
+  }
+  
