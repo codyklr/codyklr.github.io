@@ -9,10 +9,9 @@ body {
     font-family: "Space Mono", monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    /* Change to ensure consistent loading on mobile and desktop */
     background: url('imgs/background.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Separate this property for better mobile support */
+    background-attachment: fixed;
     color: #000;
     justify-content: center;
     align-items: center;
@@ -55,7 +54,7 @@ h2 {
 
 .container {
     max-width: 1100px;
-    width: 90%; /* Changed from min-width to use percentage */
+    width: 90%;
     display: flex;
     flex-direction: row;
     margin: 40px auto;
@@ -67,7 +66,6 @@ h2 {
     flex: 0 0 250px;
     padding: 20px;
     text-align: center;
-    /* border-right: 1px solid #ccc; */
     max-width: 350px;
 }
 
@@ -155,15 +153,15 @@ h2 {
         flex-direction: column;
         align-items: center;
         margin: 20px auto;
-        width: 95%; /* Increased width percentage for mobile */
-        padding: 10px; /* Reduced padding for mobile */
+        width: 95%;
+        padding: 10px;
     }
 
     .left-section,
     .right-section {
-        max-width: 100%; /* Changed to ensure full width */
+        max-width: 100%;
         width: 100%;
-        padding: 10px; /* Reduced padding */
+        padding: 10px;
     }
 
     .left-section {
@@ -176,13 +174,12 @@ h2 {
         gap: 20px;
     }
     
-    /* Fix for background on mobile */
+
     body {
-        background-attachment: scroll; /* Better performance on mobile */
+        background-attachment: scroll;
     }
 }
 
-/* Special fix for very small screens */
 @media (max-width: 375px) {
     .container {
         width: 100%;
@@ -297,7 +294,7 @@ a[href^="https"]::after {
     right: 10px;
     text-align: right;
     font-family: inherit;
-    z-index: 10; /* Added to ensure visibility */
+    z-index: 10;
 }
   
 .info-icon {
