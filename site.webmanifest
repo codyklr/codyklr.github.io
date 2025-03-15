@@ -1,7 +1,8 @@
 {
     "name": "Cody Keller",
     "short_name": "codyklr",
-    "description": "Cody Keller's developer portfolio and projects",
+    "description": "Cody Keller's personal website and portfolio.",
+    "version": "1.0.0",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0a0a0a",
