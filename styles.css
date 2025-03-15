@@ -9,8 +9,10 @@ body {
     font-family: "Space Mono", monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    background: url('imgs/background.jpg') no-repeat center center fixed;
+    /* Change to ensure consistent loading on mobile and desktop */
+    background: url('imgs/background.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed; /* Separate this property for better mobile support */
     color: #000;
     justify-content: center;
     align-items: center;
@@ -53,8 +55,7 @@ h2 {
 
 .container {
     max-width: 1100px;
-    min-width: 350px;
-    width: 100%;
+    width: 90%; /* Changed from min-width to use percentage */
     display: flex;
     flex-direction: row;
     margin: 40px auto;
@@ -154,13 +155,15 @@ h2 {
         flex-direction: column;
         align-items: center;
         margin: 20px auto;
+        width: 95%; /* Increased width percentage for mobile */
+        padding: 10px; /* Reduced padding for mobile */
     }
 
     .left-section,
     .right-section {
-        max-width: 350px;
+        max-width: 100%; /* Changed to ensure full width */
         width: 100%;
-        margin: 0 auto;
+        padding: 10px; /* Reduced padding */
     }
 
     .left-section {
@@ -171,6 +174,24 @@ h2 {
     .right-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    /* Fix for background on mobile */
+    body {
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+}
+
+/* Special fix for very small screens */
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .left-section, 
+    .right-section {
+        padding: 5px;
     }
 }
 
@@ -276,24 +297,25 @@ a[href^="https"]::after {
     right: 10px;
     text-align: right;
     font-family: inherit;
-  }
+    z-index: 10; /* Added to ensure visibility */
+}
   
-  .info-icon {
-    color:#fff;
+.info-icon {
+    color: #fff;
     font-size: 1.5rem;
     opacity: 1;
     cursor: pointer;
-  }
+}
 
-  .info-icon:hover {
+.info-icon:hover {
     opacity: 0;
-  }
+}
   
-  .info-container:hover .info-icon{
+.info-container:hover .info-icon{
     opacity: 0;
-  }
+}
   
-  .photo-credit {
+.photo-credit {
     display: none;
     margin-top: 5px;
     font-size: 0.8rem;
@@ -303,9 +325,8 @@ a[href^="https"]::after {
     border-radius: 4px;
     width: max-content;
     text-align: left;
-  }
+}
   
-  .info-container:hover .photo-credit {
+.info-container:hover .photo-credit {
     display: block;
-  }
-  
+}
