@@ -180,15 +180,20 @@ h2 {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
     .container {
-        width: 100%;
+        width: 90%;
         padding: 5px;
     }
     
     .left-section, 
     .right-section {
         padding: 5px;
+    }
+
+    .info-container {
+        visibility: hidden;
+        opacity: 0;
     }
 }
 
