@@ -332,3 +332,8 @@ a[href^="https"]::after {
 .info-container:hover .photo-credit {
     display: block;
 }
+
+.email-signature { 
+    display: none;
+    visibility: hidden;
+}
