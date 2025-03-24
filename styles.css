@@ -335,6 +335,7 @@ a[href^="https"]::after {
 
 .coming-soon {
     text-align: center;
+    color: #fff;
 }
 
 .coming-soon h1 {
