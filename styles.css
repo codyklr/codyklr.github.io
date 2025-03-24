@@ -334,19 +334,8 @@ a[href^="https"]::after {
 }
 
 .coming-soon {
-    text-align: center;
     color: #fff;
 }
-
-.coming-soon h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-
-.coming-soon p {
-    font-size: 1.5em;
-}
-
 img.email-signature { 
     display: none;
     visibility: hidden;
