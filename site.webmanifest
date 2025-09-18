@@ -1,7 +1,7 @@
 {
     "name": "Cody Keller",
     "short_name": "codyklr",
-    "description": "Cody Keller's personal website and portfolio.",
+    "description": "Cody Keller's personal website.",
     "version": "1.0.0",
     "start_url": "/",
     "display": "standalone",
