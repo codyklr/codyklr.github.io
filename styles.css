@@ -4,15 +4,76 @@ body {
     padding: 0;
 }
 
+
+
 body {
     min-height: 100vh;
-    font-family: "Space Mono", monospace, sans-serif;
+    font-family: "SpaceMono", monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: #F0EDE5;
+    background-color: #f9fafb;
     color: #000;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+}
+
+.rough-border {
+
+}
+
+.namebrand {
+    position: ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    left: 0;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.button {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: transparent;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    color: #0e1111;
+    /* Sourced from Hima Vincent @ https://codemyui.com/hand-drawn-border-buttons-css/ */
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius: 15px 255px;
+}
+
+/* Sourced from Hima Vincent @ https://codemyui.com/hand-drawn-border-buttons-css/ */
+.lined-thin {
+    border: solid 2px #0e1111;
+}
+
+.lined-thick {
+    border: solid 4px #0e1111;
+}
+
+
+
+/* work I am most proud of and want to show off */
+.featured-work {
+
+}
+
+/* a grid of all documented projects */
+.projects {
+
+}
+
+
+.footer {
+
 }
