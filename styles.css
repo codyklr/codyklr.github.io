@@ -4,36 +4,52 @@ body {
     padding: 0;
 }
 
-
+/*
+    Color Palette
+    Lightest -> Darkest
+    #909ac3
+    #747c9d
+    #505e77
+    #323544
+    #1f212a
+*/
 
 body {
-    min-height: 100vh;
+    min-height: 1vh;
     font-family: "SpaceMono", monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: #f9fafb;
-    color: #000;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-color: #1f212a;
+    color: #909ac3;
     position: relative;
 }
 
-.rough-border {
-
-}
-
-.namebrand {
-    position: ;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.logo {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 24px;
-    left: 0;
 }
 
-.header {
-    padding: 10px;
-    text-align: center;
-
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
 }
 
 .button {
@@ -44,36 +60,293 @@ body {
     background: transparent;
     padding: 1rem 1rem;
     margin: 0 1rem;
-    color: #0e1111;
-    /* Sourced from Hima Vincent @ https://codemyui.com/hand-drawn-border-buttons-css/ */
+    color: #909ac3;
+    /* Sourced from Hima Vincent @ [https://codemyui.com/hand-drawn-border-buttons-css/](https://codemyui.com/hand-drawn-border-buttons-css/) */
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
     border-bottom-right-radius: 225px 15px;
     border-bottom-left-radius: 15px 255px;
 }
 
-/* Sourced from Hima Vincent @ https://codemyui.com/hand-drawn-border-buttons-css/ */
+/* Sourced from Hima Vincent @ [https://codemyui.com/hand-drawn-border-buttons-css/](https://codemyui.com/hand-drawn-border-buttons-css/) */
 .lined-thin {
-    border: solid 2px #0e1111;
+    border: solid 2px #747c9d;
 }
 
 .lined-thick {
-    border: solid 4px #0e1111;
+    border: solid 4px #747c9d;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
 
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #909ac3;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 0 0 280px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #747c9d;
+    border-top-left-radius: 255px 235px;
+    border-top-right-radius: 235px 255px;
+    border-bottom-right-radius: 255px 235px;
+    border-bottom-left-radius: 235px 255px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    color: #909ac3;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #747c9d;
+    margin: 0 0 1rem 0;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #909ac3;
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bento-item {
+    background-color: #323544;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    min-height: 180px;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bento-item h3 {
+    margin: 0 0 0.75rem 0;
+    color: #909ac3;
+    font-size: 1.3rem;
+}
+
+.bento-item p {
+    margin: 0;
+    color: #747c9d;
+    font-size: 0.95rem;
+}
+
+/* Bento Grid Variations */
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 380px;
+}
+
+.bento-tall {
+    grid-row: span 2;
+    min-height: 380px;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
 
 /* work I am most proud of and want to show off */
 .featured-work {
-
 }
 
 /* a grid of all documented projects */
 .projects {
-
 }
 
-
 .footer {
+}
 
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .bento-large {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: 200px;
+    }
+
+    .bento-tall {
+        grid-row: span 1;
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Show hamburger menu - keep it fixed at all times */
+    .hamburger {
+        display: flex;
+        position: fixed;
+        right: 2rem;
+        top: 1.5rem;
+        z-index: 1001;
+    }
+
+    /* Hide navigation by default - slide from right */
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #323544;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-menu ul li {
+        margin: 1.5rem 0;
+    }
+
+    /* Hamburger animation when active - no position change */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero responsive */
+    .hero {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 3rem;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    /* Bento Grid responsive */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bento-large,
+    .bento-tall,
+    .bento-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 160px;
+    }
 }

@@ -1,33 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Personal Website" />
+        <meta name="keywords" content="Cody Keller" />
+        <meta name="author" content="Cody Keller" />
+        <title>Cody Keller</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Website">
-    <meta name="keywords" content="Cody Keller">
-    <meta name="author" content="Cody Keller">
-    <title>Cody Keller</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <body>
+        <header>
+            <div class="logo button lined-thick">CK</div>
 
-<body>
-    <div class="header">
-        <div class="namebrand button lined-thick">CK</div>
-        <div class="header-buttons">
-            <p class="button lined-thin">Projects</p>
-            <p class="button lined-thin">Contact Me</p>
-        </div>
-    </div>
-    <div class="container">
-        <main id="main-content">
-            <div>
-                <h1>Nothing here yet</h1>
-                <p>:)</p>
-                
-        </main>
-    </div>
-</body>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
+            <nav class="nav-menu">
+                <ul>
+                    <li class="button lined-thin">
+                        <a href="#" class="nav-link">Projects</a>
+                    </li>
+                    <li class="button lined-thin">
+                        <a href="#" class="nav-link">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="imgs/me.webp" alt="Cody Keller" />
+                </div>
+                <div class="hero-text">
+                    <h1>Hello, I'm Cody</h1>
+                    <p class="hero-subtitle">I like trying to build things</p>
+                    <p class="hero-description">
+                        Mostly I just mess around with code and try stuff out.
+                        Sometimes it works. Here's some things I've made so far.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="bento-grid">
+                <div class="bento-item bento-large button lined-thin">
+                    <h3>Featured Project</h3>
+                    <p>My biggest project so far</p>
+                </div>
+                <div class="bento-item button lined-thin">
+                    <h3>Project 2</h3>
+                    <p>Cool stuff here</p>
+                </div>
+                <div class="bento-item button lined-thin">
+                    <h3>Project 3</h3>
+                    <p>Another thing I made</p>
+                </div>
+                <div class="bento-item button lined-thin">
+                    <h3>Project 4</h3>
+                    <p>Vertical project</p>
+                </div>
+                <div class="bento-item button lined-thin">
+                    <h3>Project 5</h3>
+                    <p>More work</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
 </html>
